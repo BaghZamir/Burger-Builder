@@ -1,0 +1,66 @@
+.Modal {
+    position: fixed;
+    z-index: -1;
+    background-color: white;
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+}
+
+.Modal *, .Backdrop{
+    visibility: hidden;
+}
+
+.Modal.Open{
+    top: 10%;
+    opacity: 1;
+    z-index: 500;
+}
+
+.Modal.Open *{
+    visibility: visible;
+}
+
+.Backdrop.Open{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #00000080;
+    visibility: visible;
+}
+
+.Modal span {
+    text-transform: capitalize;
+}
+
+.CloseModal{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    cursor: pointer;
+}
+
+.Modal h3, .CloseModal, .Modal .Price{
+    font-size: 30px;
+    font-weight: bold;
+    color: #800;
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+    .Modal.Open{
+        top: 30%;
+    }
+}

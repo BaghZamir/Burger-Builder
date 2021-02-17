@@ -1,6 +1,21 @@
+@font-face {
+  font-family: "Lemonada";
+  src: url(./assets/fonts/Lemonada.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(./assets/fonts/Tajawal-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(./assets/fonts/Tajawal-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Tajawal, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +25,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.FatFont{
+  font-family: Lemonada;
+  font-size: 30px;
+  font-weight: bold;
+  color: #800;
+}
+
+.Content{
+  margin-top: 72px;
+}
+
+@media (max-width: 500px){
+  .FatFont{
+  font-size: 20px;
+  }
 }
